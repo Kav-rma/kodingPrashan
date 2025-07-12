@@ -1,40 +1,56 @@
-# kodingPrashan 💻
+# kodingPrashan 💡
 
-Welcome to **kodingPrashan**, a personal repository where I practice and store coding problems to improve my problem-solving and programming skills.
-
-## 📁 Repository Structure
-
-This repository is organized into folders based on the platforms or categories I solve problems from:
-
-- **DSA**: Contains problems related to Data Structures and Algorithms including arrays, linked lists, trees, sorting, searching, etc.
-- **GeeksforGeeks**: Contains problems and solutions from the GeeksforGeeks platform.
-
-## 🚀 Purpose
-
-The main goals of this repository are:
-- To improve my proficiency in C++ and problem-solving.
-- To maintain a clean and well-organized archive of the coding questions I practice.
-- To track my learning journey and progress over time.
-
-## 🛠️ Technologies Used
-
-- **Language**: C++
-- **Platform**: GeeksforGeeks and other standard DSA resources
-- **Version Control**: Git and GitHub
-
-## 📚 How to Use
-
-If you're a fellow learner:
-- Feel free to browse through the folders and look at the solutions.
-- You can use the code as a reference while practicing similar problems.
-
-If you're an interviewer or reviewer:
-- This repository shows my continuous effort to grow and stay sharp in algorithmic problem-solving.
-
-## 📌 Note
-
-This repository is regularly updated as I continue to practice and add new coding problems and solutions.
+A personal repository where I regularly practice coding problems from various platforms to strengthen my understanding of algorithms, data structures, and logical problem-solving.
 
 ---
 
-Feel free to fork, star ⭐, or raise issues if you have suggestions or questions!
+## 📁 Repository Structure
+
+- **DSA/**  
+  Contains a curated set of important and frequently asked coding questions. These are collected from **various platforms** — including some lesser-known sources, YouTube tutorials, mock tests, and topic-wise compilations. Ideal for revision and interview prep.
+
+- **GeeksforGeeks/**  
+  Problems solved from the [GeeksforGeeks](https://www.geeksforgeeks.org/) platform — mainly DSA-based questions and coding challenges.
+
+- **LeetCode/**  
+  Solutions to problems from [LeetCode](https://leetcode.com/) — focused on interview-style coding questions.
+
+---
+
+## 🎯 Purpose
+
+This repository serves as:
+- A personal coding log and revision archive.
+- A place to track my learning and improvements.
+- A resource for others looking for beginner-to-intermediate C++ problem solutions.
+
+---
+
+## ⚙️ Tech Stack
+
+- **Language**: C++
+- **Tools**: Git, GitHub
+- **Platforms**: GeeksforGeeks, LeetCode, and custom DSA problems
+
+---
+
+## ✅ How You Can Use This Repo
+
+- Browse categorized folders to view and learn from the solutions.
+- Use the C++ implementations for practice or as references.
+- Fork it and try solving the same problems your own way!
+
+---
+
+## 📌 Note
+
+This is an evolving repository. I will continue to:
+- Add more problems and solutions.
+- Improve existing code.
+- Maintain clean and readable C++ code.
+
+---
+
+⭐ If you find this useful, give it a star!  
+🛠️ Want to suggest improvements or corrections? Feel free to open an issue or contribute.
+
