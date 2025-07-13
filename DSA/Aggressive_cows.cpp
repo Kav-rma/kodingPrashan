@@ -16,7 +16,7 @@ using namespace std;
 
 bool isPossible(vector<int> &arr, int n, int c,int minAllowedDistance){
     int cows=1; int currentStallPosition = arr[0];
-    for(int i=1; i<n; i++){
+    for(int i=1; i<n; i++){//O(n)
         if(arr[i]-currentStallPosition >= minAllowedDistance){
             cows++;
             currentStallPosition = arr[i];           
@@ -31,14 +31,14 @@ bool isPossible(vector<int> &arr, int n, int c,int minAllowedDistance){
 int largestMinimum(vector<int> &arr, int n, int c){
     int maxi;
     int lar=INT32_MIN, small=INT32_MAX;
-    for(int i=0; i<n; i++){
+    for(int i=0; i<n; i++){//O(n)
         lar = max(lar,arr[i]);
         small = min(small,arr[i]);
     }
     maxi = lar - small;
     int str=1; int end=maxi;
     int ans=-1;
-    while(str<=end){
+    while(str<=end){//O((LogN)*n)
         int mid = str + (end - str)/2;
         if(isPossible(arr, n, c, mid)){
             ans = mid;
@@ -54,7 +54,7 @@ int largestMinimum(vector<int> &arr, int n, int c){
 int main(){
     vector<int> arr = {1,2,4,8,9};
     int n = arr.size(), c=3;
-    sort(arr.begin(),arr.end());
+    sort(arr.begin(),arr.end());//O(nLOogn)
     cout<<largestMinimum(arr, n, c)<<endl;
     return 0;
 }
