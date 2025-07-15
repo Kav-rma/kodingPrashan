@@ -29,15 +29,11 @@ bool isPossible(vector<int> &arr, int n, int c,int minAllowedDistance){
 }
 
 int largestMinimum(vector<int> &arr, int n, int c){
-    int maxi;
-    int lar=INT32_MIN, small=INT32_MAX;
-    for(int i=0; i<n; i++){//O(n)
-        lar = max(lar,arr[i]);
-        small = min(small,arr[i]);
-    }
-    maxi = lar - small;
-    int str=1; int end=maxi;
+    sort(arr.begin(),arr.end());//O(nLOogn)
+    int maxi = arr[n-1] - arr[0];
+    int str=1; int end=maxi;//Range
     int ans=-1;
+
     while(str<=end){//O((LogN)*n)
         int mid = str + (end - str)/2;
         if(isPossible(arr, n, c, mid)){
@@ -54,7 +50,7 @@ int largestMinimum(vector<int> &arr, int n, int c){
 int main(){
     vector<int> arr = {1,2,4,8,9};
     int n = arr.size(), c=3;
-    sort(arr.begin(),arr.end());//O(nLOogn)
+
     cout<<largestMinimum(arr, n, c)<<endl;
     return 0;
 }
