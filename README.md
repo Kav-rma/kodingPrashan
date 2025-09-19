@@ -30,7 +30,7 @@ This repository serves as:
 
 - **Language**: C++
 - **Tools**: Git, GitHub
-- **Platforms**: GeeksforGeeks, LeetCode, and custom DSA problems
+- **Platforms**: GeeksforGeeks, LeetCode, and DSA problems from other platforms.
 
 ---
 
