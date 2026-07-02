@@ -6,7 +6,8 @@ using namespace std;
 
 class Solution {
 public:
-    bool ifFreqSame(int freq1[], int freq2[]){
+
+    bool isFreqSame(int freq1[], int freq2[]){
         for(int i=0; i<26; i++){
             if(freq1[i] != freq2[i]) return false;
         }
@@ -14,23 +15,29 @@ public:
     }
 
     bool checkInclusion(string s1, string s2) {
-        int freqS1[26] = {0};
+        
+        if(s1.length()>s2.length()) return false;
+
+        //We get the frequency of s1 string.
+        int freq[26]={0};
         for(int i=0; i<s1.length(); i++){
-            freqS1[s1[i]-'a']++;
+            freq[s1[i]-'a']++;
         }
 
-        for(int i=0; i<s2.length(); i++){
-            int windIdx =0; int idx = i;
-            int freqWind[26]={0};
+        //frequency of first window of s2.
+        int winfreq[26] = {0};
+        for(int j=0; j<s1.length(); j++){
+            winfreq[s2[j]-'a']++;
+        }
+        if(isFreqSame(freq,winfreq)) return true;
 
-            while(windIdx<s1.length() && idx<s2.length()){
-                freqWind[s2[idx]-'a']++;
-                idx++; windIdx++;
-            }
-            
-            if(ifFreqSame(freqS1,freqWind)){
-                return true;
-            }
+        //now we are shifting the window towards right.
+        for(int i=0; i<s2.length()-s1.length(); i++){
+            //remove left
+            winfreq[s2[i]-'a']--;
+            //add right
+            winfreq[s2[i+s1.length()]-'a']++;
+            if(isFreqSame(freq,winfreq)) return true;
         }
         return false;
     }
